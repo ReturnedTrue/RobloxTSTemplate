@@ -1,5 +1,5 @@
 {
-	"name": "melee-fighters",
+	"name": "roblox-ts-template",
 	"globIgnorePaths": [
 		"**/package.json",
 		"**/tsconfig.json"
