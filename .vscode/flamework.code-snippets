@@ -1,6 +1,6 @@
 {
 	"Flamework Controller": {
-		"prefix":[ "controller", "flameworkcontroller"],
+		"prefix":["controller", "flameworkcontroller"],
 		"description": "Create a Flamework controller",
 		"body": [
 			"import { Controller } from \"@flamework/core\";",
@@ -13,7 +13,7 @@
 	},
 
 	"Flamework Service": {
-		"prefix":[ "service", "flameworkservice"],
+		"prefix":["service", "flameworkservice"],
 		"description": "Create a Flamework service",
 		"body": [
 			"import { Service } from \"@flamework/core\";",
@@ -26,7 +26,7 @@
 	},
 
 	"Flamework Component": {
-		"prefix":[ "component", "flameworkcomponent"],
+		"prefix":["component", "flameworkcomponent"],
 		"description": "Create a Flamework component",
 		"body": [
 			"import { OnStart } from \"@flamework/core\";",

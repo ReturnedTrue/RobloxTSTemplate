@@ -12,6 +12,7 @@
 		"resolveJsonModule": true,
 		"strict": true,
 		"target": "ESNext",
+		"moduleDetection": "force",
 		"typeRoots": ["node_modules/@rbxts", "node_modules/@flamework"],
 
 		// configurable
@@ -23,6 +24,10 @@
 
 		"experimentalDecorators": true,
 		"plugins": [
+			{
+				"transform": "rbxts-transform-debug",
+			},
+
 			{
 				"transform": "rbxts-transformer-flamework",
 				"obfuscation": false

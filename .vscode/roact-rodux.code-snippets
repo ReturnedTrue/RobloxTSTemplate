@@ -1,0 +1,60 @@
+{
+	"Component": {
+		"prefix": ["component", "roactcomponent"],
+		"description": "Create a Roact component",
+		"body": [
+			"import Roact from \"@rbxts/roact\";",
+			"",
+			"interface ${TM_FILENAME_BASE}Props {}",
+			"",
+			"export class ${TM_FILENAME_BASE} extends Roact.Component<${TM_FILENAME_BASE}Props> {",
+			"\trender() {",
+			"\t\treturn <></>;",
+			"\t}",
+			"}",
+			""				
+		]
+	},
+
+	"Connected Component": {
+		"prefix": ["connectedcomponent", "roactconnectedcomponent"],
+		"description": "Create a Roact component connected to the client store",
+		"body": [
+			"import Roact from \"@rbxts/roact\";",
+			"import { connectComponent } from \"client/roact/util/connectComponent\";",
+			"",
+			"interface ${TM_FILENAME_BASE}Props {}",
+			"",
+			"class Base${TM_FILENAME_BASE} extends Roact.Component<${TM_FILENAME_BASE}Props> {",
+			"\trender() {",
+			"\t\treturn <></>;",
+			"\t}",
+			"}",
+			"",
+			"export const ${TM_FILENAME_BASE} = connectComponent(Base${TM_FILENAME_BASE}, (state) => {",
+			"\treturn {};",
+			"});",
+			""
+		]
+	},
+	
+	"Reducer": {
+		"prefix": ["reducer", "roduxreducer"],
+		"description": "Create a Rodux reducer",
+		"body": [
+			"import { Action, createReducer } from \"@rbxts/rodux\";",
+			"",
+			"interface DoAction extends Action<\"doAction\"> {}",
+			"",
+			"export type ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Actions = DoAction;",
+			"export interface ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State {}",
+			"",
+			"const DEFAULT_VALUE = {} satisfies ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State;",
+			"",
+			"export const ${TM_FILENAME_BASE}reducer = createReducer<${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State, ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Actions>(DEFAULT_VALUE, {",
+			"\tdoAction: (state, action) => state,",
+			"});",
+			""
+		]
+	},
+}

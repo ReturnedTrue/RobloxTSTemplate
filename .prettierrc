@@ -1,4 +1,3 @@
 {
-	"endOfLine": "auto",
-	"arrowParens": "avoid"
+	"endOfLine": "auto"
 }
